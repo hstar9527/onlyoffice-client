@@ -1,0 +1,58 @@
+/* 行为相关颜色 */
+$--primary-color: #00aeec;
+$--main-color: #00aeec;
+$--success-color: #4cd964;
+$--warning-color: #f0ad4e;
+$--error-color: #ea4335;
+$--danger-color: #f56c6c;
+$--info-color: #909399;
+$--secondary-color: #fb8748;
+
+/* 顶部导航高度 */
+$--nav-height: 50px;
+
+@mixin ellipsis() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin line-clamp-2() {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+@mixin line-clamp-3() {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+@mixin line-clamp($num) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $num;
+  overflow: hidden;
+}
+
+@mixin scrollbar($height: 0, $width: 8px) {
+  @if $height != 0 {
+    height: $height;
+  }
+  overflow-x: hidden;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width: $width;
+    position: absolute;
+  }
+  &::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius: 10px;
+    transition: all 0.5s;
+    background-color: rgba(114, 114, 114, 0.5);
+  }
+}

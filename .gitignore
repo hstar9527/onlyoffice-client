@@ -1,0 +1,14 @@
+node_modules
+dist
+.DS_Store
+.idea
+.vscode
+.hbuilderx
+debug.log
+unpackage
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+stats.html
+auto-imports.d.ts

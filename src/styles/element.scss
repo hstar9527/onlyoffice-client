@@ -1,0 +1,29 @@
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: (
+    'primary': (
+      'base': #00aeec,
+    )
+  ),
+);
+@import 'element-plus/theme-chalk/src/index.scss';
+
+.el-dialog:not(.is-fullscreen) {
+  --el-dialog-border-radius: 12px;
+}
+
+.el-dialog__headerbtn {
+  width: 25px;
+  height: 25px;
+  //border: 1px dashed black;
+  right: 20px;
+  top: 20px;
+  border-radius: 3px;
+
+  &:hover {
+    background-color: var(--el-color-primary-light-9);
+  }
+
+  i {
+    top: 2px;
+  }
+}

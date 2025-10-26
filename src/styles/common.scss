@@ -1,0 +1,89 @@
+$dom: html, body, div, p, h1, h2, h3, h4, h5, h6, dl, dt, dd, ul, ol, li, pre, form, fieldset, input, textarea,
+blockquote;
+#{$dom} {
+  box-sizing: border-box;
+  margin: 0;
+  //padding: 0;
+}
+
+div::-webkit-scrollbar {
+  width: 6px;
+}
+
+div::-webkit-scrollbar-thumb {
+  background: #ccc; // 滑块颜色
+  border-radius: 5px; // 滑块圆角
+}
+
+
+body {
+  min-width: 1200px;
+  background-color: var(--bg-color);
+  color: var(--el-text-color-regular);
+  // 统一mac、windows字体样式
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC,
+  Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
+}
+
+div,
+span {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  text-decoration: none;
+  //color: $--primary-color;
+}
+
+img {
+  -webkit-user-drag: none; //防止图片被拖拽
+}
+
+.link {
+  color: $--primary-color;
+  cursor: pointer;
+}
+
+.success {
+  color: $--success-color;
+}
+
+.error,
+.danger {
+  color: $--error-color;
+}
+
+.warning {
+  color: $--warning-color;
+}
+
+.secondary {
+  color: $--secondary-color;
+}
+
+.primary {
+  color: $--primary-color;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.ellipsis {
+  @include ellipsis();
+}
+
+// 保留空白符序列\n正常换行,处理字母数字自动换行
+.word-wrap {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
