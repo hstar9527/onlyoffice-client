@@ -89,7 +89,7 @@ function handleCreateContract() {
 
 function handleEdit(row) {
   // window.open(`/#/office?fileUrl=${encodeURIComponent(row.fileUrl)}&mode=EDIT`);
-  window.open(`/#/office?fileUrl=${encodeURIComponent("hxx.xlsx")}&mode=EDIT`);
+  window.open(`/#/office?fileUrl=${encodeURIComponent("hxx.docx")}&mode=EDIT`);
 }
 
 function handlePreview(row) {
